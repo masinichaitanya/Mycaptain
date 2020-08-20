@@ -1,0 +1,13 @@
+import operator
+def most_frequent(x):
+  dic1={}
+  for i in x:
+    if i in dic1:
+      dic1[i]+=1
+    else:
+      dic1[i]=1
+  dic2=sorted(dic1.items(),key=operator.itemgetter(1),reverse=True)
+  for i in dic2:
+    print(i[0],"=",i[1])
+str1=input()
+most_frequent(str1)
